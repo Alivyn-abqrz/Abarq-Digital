@@ -35,17 +35,19 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full top-0 py-4 transition duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
       <div className="container mx-auto flex justify-between items-center px-6">
+        {/* Toggle Menu on the left */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-gray-800 dark:text-gray-100 focus:outline-none mr-2"
+        >
+          {isOpen ? '✕' : '☰'} {/* Hamburger icon */}
+        </button>
+        
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="flex text-2xl font-bold text-gray-800 dark:text-gray-100">
             <img src={logo} alt='logo' className='w-9' />
             Abarq Digital
           </div>
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-gray-800 dark:text-gray-100 focus:outline-none mr-2"
-          >
-            {isOpen ? '✖' : '☰'} {/* Hamburger icon */}
-          </button>
         </div>
 
         {/* Desktop Menu */}
