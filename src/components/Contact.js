@@ -19,7 +19,7 @@ const ContactSection = () => {
               className="font-semibold cursor-pointer text-green-500" 
               onClick={handleEmailClick}
             >
-              {" "}Abarq-Digital@gmail.com
+              {" "}Abarq-Digital@gmail.com &nbsp;
             </span> 
             or call us at <span className="font-semibold">+639632066988</span>.
           </p>

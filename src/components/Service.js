@@ -35,7 +35,7 @@ const ServiceSection = () => {
           Our <span className="text-green-500">Services</span>
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-12 text-lg md:text-xl">
-          At Abarq Digital, we provide reliable repair services for your essential devices.
+           We provide reliable repair services for your essential devices.
         </p>
 
         {/* Services Grid */}
@@ -43,7 +43,7 @@ const ServiceSection = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 cursor-pointer"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 cursor-pointer"
               onClick={handleCardClick}
             >
               <img src={service.icon} alt={`${service.title} Icon`} className="w-16 h-16 mx-auto mb-4" />
