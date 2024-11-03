@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { Link as ScrollLink } from 'react-scroll';
+import logo from '../img/logo.png';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,9 +36,12 @@ const Navbar = () => {
     <nav className={`fixed w-full top-0 py-4 transition duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
       <div className="container mx-auto flex justify-between items-center px-6">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <div className="text-2xl font-bold text-gray-800 dark:text-gray-100">Abarq Digital</div>
-          <button 
-            onClick={toggleMenu} 
+          <div className="flex text-2xl font-bold text-gray-800 dark:text-gray-100">
+            <img src={logo} alt='logo' className='w-9' />
+            Abarq Digital
+          </div>
+          <button
+            onClick={toggleMenu}
             className="md:hidden text-gray-800 dark:text-gray-100 focus:outline-none mr-2"
           >
             {isOpen ? '✖' : '☰'} {/* Hamburger icon */}
@@ -45,10 +50,18 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a href="#home" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Home</a>
-          <a href="#about" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>About</a>
-          <a href="#services" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Services</a>
-          <a href="#contact" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Contact</a>
+          <ScrollLink to="home" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            Home
+          </ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            About
+          </ScrollLink>
+          <ScrollLink to="services" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            Services
+          </ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            Contact
+          </ScrollLink>
         </div>
 
         <button
@@ -64,10 +77,18 @@ const Navbar = () => {
       {isOpen && (
         <div className={`md:hidden bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-100 mt-2 rounded-lg`}>
           <div className="flex flex-col space-y-2 px-6 py-4">
-            <a href="#home" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Home</a>
-            <a href="#about" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>About</a>
-            <a href="#services" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Services</a>
-            <a href="#contact" className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Contact</a>
+            <ScrollLink to="home" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+              Home
+            </ScrollLink>
+            <ScrollLink to="about" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+              About
+            </ScrollLink>
+            <ScrollLink to="services" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+              Services
+            </ScrollLink>
+            <ScrollLink to="contact" smooth={true} duration={500} className={`hover:text-green-400 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+              Contact
+            </ScrollLink>
           </div>
         </div>
       )}

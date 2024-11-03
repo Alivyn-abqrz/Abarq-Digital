@@ -1,6 +1,10 @@
 const ContactSection = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:Abarquezalvin10@.com";
+  };
+
   return (
-    <section id="contact" className="bg-gray-100 dark:bg-gray-900 py-16">
+    <section id="contact" className="bg-gray-100 dark:bg-gray-900 py-16"><br/>
       <div className="container mx-auto px-6 md:px-12 lg:flex lg:items-center lg:space-x-12">
         <div className="lg:w-1/2 mb-12 lg:mb-0">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4 md:text-4xl">
@@ -10,7 +14,14 @@ const ContactSection = () => {
             We’d love to hear from you! Please fill out the form below to reach out to us.
           </p>
           <p className="text-gray-600 dark:text-gray-300">
-            Alternatively, you can email us directly at <span className="font-semibold">contact@ourcompany.com</span> or call us at <span className="font-semibold">(123) 456-7890</span>.
+            Alternatively, you can email us directly at 
+            <span 
+              className="font-semibold cursor-pointer text-green-500" 
+              onClick={handleEmailClick}
+            >
+              {" "}Abarq-Digital@gmail.com
+            </span> 
+            or call us at <span className="font-semibold">+639632066988</span>.
           </p>
         </div>
 

@@ -39,7 +39,7 @@ const Footer = () => {
           <h2 className="text-xl font-bold mb-4">Contact</h2>
           <p className="mb-2">Gruar phase 1 brgy sto. dominggo</p>
           <p className="mb-2">Cainta, Rizal</p>
-          <p className="mb-2">Email: abarquezalvin10@gmail.com</p>
+          <p className="mb-2">Email: Abarq-Digital@gmail.com</p>
           <p>Phone: +639632066988</p>
         </div>
       </div>
